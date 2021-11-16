@@ -1,21 +1,123 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="ios_quizs_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label quiz TestLabel quiz TestLabel " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr0-YC-uIO">
+                        <rect key="frame" x="18" y="0.0" width="382" height="61"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="61" id="N1v-eI-3yZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="exq-tq-Flc">
+                        <rect key="frame" x="20" y="61" width="160" height="128"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-YF-MgZ">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="onAnswersButtonsClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FTl-Nl-Yum"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAy-Yi-IhO">
+                                <rect key="frame" x="0.0" y="64" width="160" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="onAnswersButtonsClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ayv-pL-7g6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-MV-khZ">
+                        <rect key="frame" x="220" y="61" width="160" height="128"/>
+                        <subviews>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oR-qq-AaA">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="onAnswersButtonsClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="obU-OC-9du"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NG-ST-Ifh">
+                                <rect key="frame" x="0.0" y="64" width="160" height="64"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRadioButtonSelected" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAnswersButtonsClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ABQ-q4-j9U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWh-Yg-JLy">
+                        <rect key="frame" x="0.0" y="0.0" width="18" height="61"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gd8-MV-khZ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="22i-dh-k6R"/>
+                    <constraint firstItem="exq-tq-Flc" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="GY4-oU-DYb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gd8-MV-khZ" secondAttribute="bottom" id="IFh-Lj-JiT"/>
+                    <constraint firstItem="Qr0-YC-uIO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IlV-Fv-f20"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gd8-MV-khZ" secondAttribute="trailing" id="RBv-fE-D3o"/>
+                    <constraint firstItem="exq-tq-Flc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Zxe-jy-rJp"/>
+                    <constraint firstItem="UWh-Yg-JLy" firstAttribute="height" secondItem="Qr0-YC-uIO" secondAttribute="height" id="aRV-I5-6Nu"/>
+                    <constraint firstItem="Qr0-YC-uIO" firstAttribute="leading" secondItem="UWh-Yg-JLy" secondAttribute="trailing" id="d4R-xm-gWd"/>
+                    <constraint firstItem="gd8-MV-khZ" firstAttribute="top" secondItem="Qr0-YC-uIO" secondAttribute="bottom" id="dCZ-Ww-BS9"/>
+                    <constraint firstAttribute="trailing" secondItem="Qr0-YC-uIO" secondAttribute="trailing" id="dZu-mv-qrs"/>
+                    <constraint firstItem="UWh-Yg-JLy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dwW-tl-0zR"/>
+                    <constraint firstItem="exq-tq-Flc" firstAttribute="top" secondItem="Qr0-YC-uIO" secondAttribute="bottom" id="eRr-qB-AxU"/>
+                    <constraint firstItem="UWh-Yg-JLy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gnd-Jk-hiJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="exq-tq-Flc" secondAttribute="bottom" id="zvF-yw-QRL"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="answerFour" destination="9NG-ST-Ifh" id="5nc-RI-2X3"/>
+                <outlet property="answerOne" destination="aAo-YF-MgZ" id="6sj-Sf-p1E"/>
+                <outlet property="answerThree" destination="0oR-qq-AaA" id="tc3-Tr-bWN"/>
+                <outlet property="answerTwo" destination="eAy-Yi-IhO" id="LPf-qG-8Tf"/>
+                <outlet property="numberingLabel" destination="UWh-Yg-JLy" id="3Mx-bU-z2u"/>
+                <outlet property="questionLabel" destination="Qr0-YC-uIO" id="N3p-Ol-bRX"/>
+            </connections>
+            <point key="canvasLocation" x="150.72463768115944" y="186.83035714285714"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="0oR-qq-AaA">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="9NG-ST-Ifh">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="aAo-YF-MgZ">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+        <designable name="eAy-Yi-IhO">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
+    </designables>
 </document>

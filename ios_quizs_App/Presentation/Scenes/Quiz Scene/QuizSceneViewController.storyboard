@@ -30,14 +30,32 @@
                             <constraint firstItem="ti0-zC-4kd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="u7X-1g-w7L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Quiz Started" id="HDa-59-7E1"/>
+                    <navigationItem key="navigationItem" title="Quiz Started" id="HDa-59-7E1">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="fqS-a0-ucF">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="onSubmitClick:" destination="Y6W-OH-hqX" id="e2p-2h-4L4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tasksTableView" destination="ti0-zC-4kd" id="A5G-MG-m2Y"/>
+                        <segue destination="IIO-Oj-5BK" kind="show" identifier="ResultFullScreenViewController" id="Yfl-mN-ajP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1907.2463768115942" y="123.88392857142857"/>
+        </scene>
+        <!--ResultFullScreenViewController-->
+        <scene sceneID="jTT-gi-aBT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ResultFullScreenViewController" referencedIdentifier="ResultFullScreenViewController" id="IIO-Oj-5BK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7FA-qb-psd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PR-RK-8l0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2691" y="71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Akt-Yv-0JO">
@@ -61,6 +79,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
