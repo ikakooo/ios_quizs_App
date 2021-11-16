@@ -79,19 +79,6 @@ class TaskTableViewCell: UITableViewCell {
     @IBAction func onAnswersButtonsClick(_ sender: UIButton) {
         guard let task = task else {return}
         
-//        answerOne.isEnabled = false
-//        answerTwo.isEnabled = false
-//        answerThree.isEnabled = false
-//        answerFour.isEnabled = false
-//        sender.blueSelected()
-//        sender.isEnabled = true
-        //        if correct == sender.tag {
-        //            sender.correctGreenSelected()
-        //           // delegate?.selectAnswer(sender.tag)
-        //        }else {
-        //            sender.inCorrectRedSelected()
-        //        }
-        
         switch sender.tag {
         case 1 : delegate?.selectAnswer(ANS.I,task:task)
         case 2 : delegate?.selectAnswer(ANS.II,task:task)
@@ -102,6 +89,6 @@ class TaskTableViewCell: UITableViewCell {
     }
 }
 
-protocol TaskTableViewCellUpdaterDelegate: QuizSceneViewController { // the name of the protocol you can put any
+protocol TaskTableViewCellUpdaterDelegate: QuizSceneViewController {
     func selectAnswer(_ isANS: ANS ,task:Task)
 }

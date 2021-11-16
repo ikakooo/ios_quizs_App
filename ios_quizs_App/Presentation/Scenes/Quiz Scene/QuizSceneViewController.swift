@@ -128,14 +128,4 @@ extension QuizSceneViewController: UITableViewDataSource {
         
         return cell
     }
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if tableView === downloadsTableView {
-//            return "Download Queue (\(downloadTasks.count))"
-//        } else if tableView === completedTableView {
-//            return "Completed (\(completedTasks.count))"
-//        } else {
-//            return nil
-//        }
-//    }
-
 }
