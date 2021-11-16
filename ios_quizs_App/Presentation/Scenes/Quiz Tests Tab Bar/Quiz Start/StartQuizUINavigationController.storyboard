@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8kY-gN-8tq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -21,7 +21,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Quiz"/>
                                 <connections>
-                                    <segue destination="W9C-Ou-eG4" kind="show" id="mHa-59-9VX"/>
+                                    <segue destination="Jfd-yI-gdH" kind="show" id="9fa-Aq-jva"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,20 +32,41 @@
                             <constraint firstItem="8qz-Z9-pOn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Z1D-BS-ag1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KPQ-T4-AAl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="124"/>
+            <point key="canvasLocation" x="997.10144927536237" y="123.88392857142857"/>
         </scene>
-        <!--QuizTestsUITabBarController-->
-        <scene sceneID="Ov4-k5-apP">
+        <!--QuizSceneViewController-->
+        <scene sceneID="dey-4Q-pV7">
             <objects>
-                <viewControllerPlaceholder storyboardName="QuizTestsUITabBarController" referencedIdentifier="QuizTestsUITabBarController" id="W9C-Ou-eG4" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qui-lL-30J"/>
+                <viewControllerPlaceholder storyboardName="QuizSceneViewController" referencedIdentifier="QuizSceneViewController" id="Jfd-yI-gdH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Jt-3d-Ixi"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ysw-dG-E69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmC-dQ-tw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="126"/>
+            <point key="canvasLocation" x="1908" y="162"/>
+        </scene>
+        <!--Start-->
+        <scene sceneID="5bN-2r-xMt">
+            <objects>
+                <navigationController storyboardIdentifier="StartQuizUINavigationController" automaticallyAdjustsScrollViewInsets="NO" id="8kY-gN-8tq" customClass="StartQuizUINavigationController" customModule="ios_quizs_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Start" id="0x7-QT-Q7c"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lSH-bv-ne6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="J4t-1z-WNZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBN-GR-1LE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
